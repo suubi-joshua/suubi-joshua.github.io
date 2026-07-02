@@ -236,7 +236,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(1) contrast(1.15);
 }
 
 @media (max-width: 991px) {
