@@ -214,14 +214,12 @@ body {
 
 .hero-image-col {
   position: relative;
-  display: flex !important;
-  align-items: stretch;
-  overflow: hidden;
+  min-height: 70vh;
 }
 
 .hero-image-wrap {
   position: absolute;
-  inset: -5vh -5vw;
+  inset: 0;
   overflow: hidden;
 }
 
@@ -229,7 +227,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--black) 0%, transparent 30%, transparent 70%, var(--black) 100%);
+  background: linear-gradient(90deg, var(--black) 0%, rgba(0,0,0,0.6) 30%, transparent 50%, rgba(0,0,0,0.6) 80%, var(--black) 100%);
   pointer-events: none;
 }
 
@@ -239,6 +237,12 @@ body {
   object-fit: cover;
   display: block;
   filter: grayscale(1) contrast(1.15);
+}
+
+@media (max-width: 991px) {
+  .hero-image-col {
+    display: none !important;
+  }
 }
 
 .hero-code-block {
